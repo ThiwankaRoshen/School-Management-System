@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <left>
+      <AnchorPane prefHeight="720.0" prefWidth="513.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="374.0" fitWidth="336.0" layoutX="73.0" layoutY="192.0">
+               <image>
+                  <Image url="file:/C:/Users/trixr/eclipse-workspace/SriAkka/src/images/Principle/Rewatha%20Rathnapala%20college%20logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="91.0" layoutY="124.0" text="KULI/  Sri Rewatha Rathanapala College">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="85.0" text="School Management System">
+               <font>
+                  <Font name="Britannic Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="720.0" prefWidth="634.0" style="-fx-background-color: #F0929A;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="160.0" layoutY="90.0" text="Login Form">
+               <font>
+                  <Font name="Britannic Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="144.0" layoutY="130.0" prefHeight="18.0" prefWidth="246.0" text="A c c e s s         Y o u r        A c c o u n t">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="280.0" text="Username">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="390.0" text="Password">
+               <font>
+                  <Font name="Copperplate Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameFeild" layoutX="50.0" layoutY="300.0" prefHeight="30.0" prefWidth="400.0" promptText="Enter Your Password" style="-fx-background-color: #FFFFFF;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TextField>
+            <PasswordField fx:id="userPasswordFeild" layoutX="50.0" layoutY="410.0" prefHeight="30.0" prefWidth="400.0" promptText="Enter Your Password Here" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </PasswordField>
+            <Button fx:id="loginbtn" blendMode="DARKEN" layoutX="151.0" layoutY="528.0" mnemonicParsing="false" onMouseClicked="#handleLogin" prefHeight="30.0" prefWidth="199.0" style="-fx-background-color: #B84357;" text="Login" textFill="#220303">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.46" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="18.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/trixr/eclipse-workspace/SriAkka/src/images/Principle/Login%20User%20Icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="12.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/trixr/eclipse-workspace/SriAkka/src/images/Principle/Login%20Lock%20icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="107.0" fitWidth="110.0" layoutX="200.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/trixr/eclipse-workspace/SriAkka/src/images/Principle/Login%20UserAccount.png" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="50.0" layoutY="440.0" text="Forgot Password ?" />
+            <RadioButton fx:id="studentRadioBtn" layoutX="66.0" layoutY="492.0" mnemonicParsing="false" onAction="#handleRadioButton" text="Student">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="role" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="teacherRadioBtn" layoutX="195.0" layoutY="492.0" mnemonicParsing="false" onAction="#handleRadioButton" text="Teacher" toggleGroup="$role">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="adminRadioBtn" layoutX="314.0" layoutY="492.0" mnemonicParsing="false" onAction="#handleRadioButton" text="Admin" toggleGroup="$role">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="64.0" layoutY="473.0" text="Select Your Role Here">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </right>
+</BorderPane>
